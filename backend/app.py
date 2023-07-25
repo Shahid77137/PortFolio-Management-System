@@ -2,9 +2,9 @@ from flask import Flask, request
 from flask_cors import CORS
 
 from service.authLog import signUp, logIn, logout, deleteUser, updateUser, readManager, isAdmin
-from service.projects import createProject, asignProjectToManager, update_Project, deleteProject, displayProjects, \
+from service.projects import createProject, assignProjectToManager, update_Project, deleteProject, displayProjects, \
     display_single_project
-from service.resource import addResource, deleteResource, updateResource, showResources, asignResourceToTask, \
+from service.resource import addResource, deleteResource, updateResource, showResources, assignResourceToTask, \
     show_single_resource
 from service.tasks import createTask, deleteTask, updateTask, showTasks, show_single_task
 
@@ -60,7 +60,7 @@ def addProject(email):
 # Assign Project to Manager Route
 @app.route('/project/<email>', methods=['PUT'])
 def assignProject(email):
-    return asignProjectToManager(email, request.get_json())
+    return assignProjectToManager(email, request.get_json())
 
 # Update Project Route
 @app.route('/project/<email>', methods=['PATCH'])
@@ -105,7 +105,7 @@ def getAllResources(email):
 # Assign Resource to Task Route
 @app.route('/res/<email>/<task>/<resId>', methods=['PATCH'])
 def assignResources(email, task, resId):
-    return asignResourceToTask(email, task, resId)
+    return assignResourceToTask(email, task, resId)
 
 # Get Single Resource for a Manager Route
 @app.route('/res/<email>/<resid>')
