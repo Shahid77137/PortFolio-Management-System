@@ -1,0 +1,538 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background-image: url(./source/background_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* Loading Start */
+/* LoadingScreen.css */
+
+/* Center the loading screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+/* Custom loader design - rotating animation */
+.loader {
+  position: fixed;
+  top: 150px;
+  left: 600px;
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #a9db34; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin:auto;
+  overflow: hidden;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Additional styling for the "Loading..." text */
+h2 {
+  margin-top: 16px;
+}
+
+/* Loading end */
+
+.title{
+  text-align: center;
+  font-size:70px;
+  font-weight: 900;
+  background-image: url(./source/heading_img.jpg);
+  background-size: contain;
+  background-position: right;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.container {
+  text-align:left;
+  border-radius: 5px;
+  padding: 20px;
+  max-height: 100px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  width: 320px;
+  max-width: 90%;
+  color: #92400E;
+  font-weight: 500;
+  margin: auto;
+  
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.form-group button {
+  padding: 12px 20px;
+  background-color: #92400E;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+.form-group button:hover {
+  
+  background-color: #0056b3;
+}
+.switch-form {
+  margin-top: 10px;
+  text-align: center;
+}
+.switch-form a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+}
+.switch-form a:hover {
+  color: #0056b3;
+}
+.switch-form button{
+  color: #fff;
+  background-color: #92400E;
+  margin-bottom: 10px;
+}
+.home_main{
+  display: flex;
+  height: 500px;
+  width: 98%;
+  padding: 5px;
+  margin-right: 5px;
+  margin: auto;
+  
+}
+.navbar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent background color */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #CF4A22, #8c8c8c) 1;
+}
+.navbar h1{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.navbar button{
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db; /* Button background color */
+  color: #ffffff; /* Button text color */
+  font-size: 1rem;
+  cursor: pointer;
+}
+.navbar button:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last button */
+}
+.mainframe{
+  width: 98%;
+  height: 100%;
+  padding: 5px;
+  margin: auto;
+  border-width: 2px;
+  border-style: solid;
+  overflow: scroll;
+  border-image: linear-gradient(to right, #CF4A22, #8c8c8c) 1;
+}
+/* ProjectInfoTable.css */
+.project-info-table {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+thead {
+  background-color: #3498db; /* Header background color */
+  color: #ffffff; /* Header text color */
+}
+
+thead th {
+  font-size: 16px;
+}
+td{
+  background-color: rgb(252,252,253,0.7);
+  font-weight: 500;
+  color: #E40046;
+}
+
+
+tbody tr:hover {
+  background-color: rgb(252,252,253,0.9);
+}
+
+tbody td {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.operation-icons {
+  display: flex;
+}
+
+.operation-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  color: #2980b9; /* Icon color (you can use an icon library or SVG icons) */
+}
+
+/* Add some subtle box shadow to the table for depth */
+table {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a border-radius to the table for a more rounded look */
+table {
+  border-radius: 8px;
+}
+
+/* Style the table header cells with a gradient background */
+thead th {
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+/* project Pop Up */
+/* Popup Styling */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  padding: 30px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.popup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-form input,
+.popup-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.popup-form input[type='date'] {
+  /* Style the date input field */
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.popup-form textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.popup-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Custom Styling for Specific Elements */
+.popup-form input:invalid,
+.popup-form textarea:invalid {
+  border-color: #e74c3c;
+  background-color: #f9d6d5;
+}
+
+.popup-form input:valid,
+.popup-form textarea:valid {
+  border-color: #2ecc71;
+  background-color: #d4f5da;
+}
+.inputboxEditable{
+  border-color:#2ecc71 ;
+  background-color: #d4f5da;
+}
+/* Confirmation Box */
+.confirmation-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.confirmation-popup {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+}
+
+.confirmation-popup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmation-buttons button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Create Project Css */
+.new-project-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='date'],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+button:hover {
+  background-color: #2980b9;
+}
+/* CreateResource.css */
+
+/* Styling for the container div with unique class */
+.unique-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-image: linear-gradient(to right, #CF4A22, #8c8c8c) 1;
+  border-radius: 5px;
+  color: #CF4A22;
+  background-color: rgb(247,247,248,0.6);
+  
+}
+
+/* Styling for input fields and select dropdown */
+.unique-form input,
+.unique-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the "Is Locked" checkbox and label */
+.unique-form label {
+  margin-left: 10px;
+}
+
+/* Styling for the password field when isLocked is true */
+.unique-form .password-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the submit button (optional) */
+.unique-form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.unique-form button:hover {
+  background-color: #45a049;
+}
+/* ResourceEditPopup.css */
+
+.resourcePopupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resourceEdit {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resourceEdit h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group input[type='checkbox'] {
+  margin-top: 1px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background-color: #ccc;
+}
+
+.buttons button:last-child {
+  background-color: #4caf50;
+  color: #fff;
+}
